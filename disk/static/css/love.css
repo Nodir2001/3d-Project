@@ -1,0 +1,21 @@
+p.new::after {
+    font-weight: 900;
+    /* Толщина шрифта */
+    color: rgb(108, 4, 4);
+    /* Цвет текста */
+    background-color: #fc0;
+    /* Цвет фона */
+    font-size: 90;
+    /* Размер шрифта */
+    padding: 2px 4px;
+    /* Поля вокруг текста */
+}
+
+#type {
+    transition: opacity .4s;
+    opacity: 0;
+}
+
+#type.active {
+    opacity: 1;
+}

@@ -1,0 +1,98 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Phone input</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'js/phoneinput.js' %}">
+    </script>
+    <script src="{% static 'js/anime.min.js' %}">
+    </script>
+    <!-- <script src="{% static 'js/anime.js' %}"></script> -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/checkbox.css' %}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"> -->
+    <!-- <script type="text/javascript">
+        var itemListParent = document.querySelector('.wrapper');
+        var itemList = document.querySelectorAll('.item');
+
+        // сработает как appendChild (т.к. второй аргумент null) - поместит второй элемент в конец родительского.
+        itemListParent.insertBefore(itemList[1], null);
+
+        // сработает как того предполагает insertBefore() - вставит пятый элемент перед первым
+        itemListParent.insertBefore(itemList[4], itemList[0]);
+    </script> -->
+    <script src="{% static 'js/preloader.js' %}">
+    </script>
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+</head>
+
+<body>
+    <!-- <style>
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            visibility: hidden;
+            display: none;
+        }
+
+        .check {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 20px;
+            background: #092c3e;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: ease-in 0.5s;
+        }
+        input[type="checkbox"]:checked ~ .check{
+            background: #fff;
+            box-shadow: 0 0 0 1200px #092c3e;
+        }
+        .check:before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: #fff;
+            width: 16px;
+            height: 16px;
+        }
+    </style> -->
+    <div id="preloader_malc">
+        <div class="spinner"></div>
+    </div>
+    <header style="height: 90%;">
+        <label>
+            <input type="checkbox">
+            <span class="check"></span>
+        </label>
+        <div style="position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    color: red;">
+            <div><a href="{% url 'love' %}" style="color: red;" class="like">love</a></div>
+            <div><a href="{% url 'threeCar' %}" style="color: red;">threeCard</a></div>
+            <div><a href="{% url 'drink' %}" style="color: red;">Coca cola</a></div>
+            <div><a href="{% url 'moon' %}" style="color: red;">Moon Paralaax</a></div>
+            <div><a href="{% url 'video' %}" style="color: red;">My first video</a></div>
+            <div><a href="{% url 'eye' %}" style="color: red;">My first Eyes</a></div>
+            <div><a href="{% url 'Dback' %}" style="color: red;"> 3D background</a></div>
+            <div><a href="{% url 'Click' %}" style="color: red;"> Click effect</a></div>
+            <div><a href="{% url 'Road' %}" style="color: red;"> Endless Road Animation Effects</a></div>
+            <div><a href="{% url 'Social' %}" style="color: red;">3D Isometric Social Media</a></div>
+            <div><a href="{% url 'Color' %}" style="color: red;"> Black and Light</a></div>
+            <div><a href="{% url 'pixsar' %}" style="color: red;"> Pixsar</a></div>
+            <div><a href="{% url 'Dark' %}" style="color: red;"> Dark Moded</a></div>
+
+        </div>
+    </header>
+    {% block content %} {% endblock %}
+</body>
+
+</html>

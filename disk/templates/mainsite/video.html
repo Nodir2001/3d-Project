@@ -1,0 +1,107 @@
+{% extends 'mainsite/base.html' %} {% block content %}
+{% load static %}
+
+<body>
+    <div class="container">
+        <h2>
+            <span> My first video on </span><br> AnimeJS
+        </h2>
+
+    </div>
+
+    <script>
+        const container = document.querySelector('.container')
+        for(var i = 0; i<= 1; i++) {
+            const blocks = document.createElement('div');
+            blocks.classList.add('block');
+            container.appendChild(blocks);
+        }
+
+        function animateBlocks(){
+            anime({
+                targets: '.block',
+                translateX: function(){
+                    return anime.random(-700,700);
+                },
+                translateY: function(){
+                    return anime.random(-500,500);
+                },
+                scale: function () {
+                    return anime.random(1, 2);
+                },
+
+                easing: 'linear',
+                duration: 3000,
+                delay: anime.stagger(10),
+                complete: animateBlocks,
+            })
+        }
+
+        animateBlocks()
+    </script>
+    <script>
+         const container1 = document.querySelector('.container')
+        for(var i = 0; i<= 1; i++) {
+            const blocks = document.createElement('div');
+            blocks.classList.add('block1');
+            container1.appendChild(blocks);
+        }
+
+        function animateBlocks(){
+            anime({
+                targets: '.block1',
+                translateX: function(){
+                    return anime.random(-700,700);
+                },
+                translateY: function(){
+                    return anime.random(-500,500);
+                },
+                scale: function () {
+                    return anime.random(1, 2);
+                },
+
+                easing: 'linear',
+                duration: 3000,
+                delay: anime.stagger(10),
+                complete: animateBlocks,
+            })
+        }
+
+        animateBlocks()
+    </script>
+    <script>
+        const container2 = document.querySelector('.container')
+       for(var i = 0; i<= 1; i++) {
+           const blocks = document.createElement('div');
+           blocks.classList.add('block2');
+           container2.appendChild(blocks);
+       }
+
+       function animateBlocks(){
+           anime({
+               targets: '.block2',
+               translateX: function(){
+                   return anime.random(-700,700);
+               },
+               translateY: function(){
+                   return anime.random(-500,500);
+               },
+               scale: function () {
+                   return anime.random(1, 2);
+               },
+
+               easing: 'linear',
+               duration: 3000,
+               delay: anime.stagger(10),
+               complete: animateBlocks,
+           })
+       }
+
+       animateBlocks()
+   </script>
+
+</body>
+<script src="anime.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/video.css' %}">
+
+{% endblock %}

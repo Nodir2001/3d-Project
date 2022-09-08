@@ -1,0 +1,119 @@
+{% block content %}
+{% load static %}
+<style>
+    https://www.youtube.com/watch?v=ut5KlHABVC8
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        cursor: none !important;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px;
+        background: #fff;
+    }
+    
+    section h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    
+    section p {
+        font-size: 1.2em;
+    }
+    
+    #cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: rgb(138, 12, 12);
+        border-radius: 50%;
+        transform: translate(-50%, 50%);
+        mix-blend-mode: difference;
+        transition: width 0.5s, height 0.5s;
+    }
+    
+    #cursor:active {
+        width: 100%;
+        height: 100%;
+        transition: width 5s, height 5s;
+    
+    }
+    
+    #cursor::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    #cursor::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 20px;
+        background: rgb(100, 26, 220);
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    
+    #cursor:active::before,
+    #cursor:active::after {
+        opacity: 1;
+    }
+    </style>
+<body>
+    <section>
+        <h2>Click and Hold effect</h2>
+        <p>Ut. Pellentesque morbi dictum. Eget hac integer interdum dictum.<br>
+            Venenatis nec sapien nisi dui ultricies. Non vestibulum eleifend morbi <br>
+            sit aenean malesuada lacinia cursus integer velit in dictumst. <br>
+            Efficitur ornare dolor imperdiet ipsum et arcu quis, habitasse <br>
+            in odio. Risus cursus integer cras leo, dictum. Amet, imperdiet <br>
+            malesuada sed habitasse platea efficitur sed pulvinar augue accumsa.</p><br><br>
+        <p>Accumsan sit odio. Molestie ornare nisi dictum cursus lectus velit dictum. <br>
+            Vulputate vestibulum mollis arcu mattis elit. Sapien ipsum mauris nisi sit <br>
+            sit molestie molestie ut. Odio. Amet amet, vulputate nisi integer sed faucibus.<br>
+            Accumsan ipsum amet, leo, malesuada sed tempus adipiscing mollis dui amet mattis <br>
+            sit ornare morbi ornare nunc integer et pulvinar in ex. Odio. Augue sodales mattis <br>
+            ornare ornare integer vitae cras molestie pulvinar nunc molestie ultricies. <br>
+            Orci, integer consectetur ultricies. Dictum. Nec quam, in amet, dapibu.</p><br>
+        <p>Risus amet vulputate et. Pellentesque dictum lorem lacinia ultricies. Sit pulvinar <br>
+            urna habitasse nec sed in pellentesque mauris pulvinar sed sed morbi <br>
+            cras ex. Aenean venenatis ornare sodales mattis mauri.</p>
+    </section>
+    <div id="cursor"></div>
+    <script>
+    var cursor = document.getElementById('cursor');
+    window.onmousemove = function(e) {
+        var x = e.clientX,
+            y = e.clientY;
+           
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+
+    }
+</script>
+<style>
+    #cursor:active{
+        width: 500px;
+        height: 500px;
+    }
+</style>
+    <link rel="stylesheet" href="{% static 'css/Click.css' %}">
+</body>
+{% endblock %}

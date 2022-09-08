@@ -1,0 +1,204 @@
+/*{
+    padding: 0;
+    margin: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    /* flex-wrap: nowrap; */
+/*
+    justify-content: center;
+    align-content: center;
+}
+
+input {
+    font-size: 120px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    min-width: 800px;
+    max-width: 900px;
+    width: 90%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.placeholder{ 
+    flex: 1;
+} */
+
+/* ========================================================================================= */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #434343;
+}
+
+ul {
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+
+ul li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background-color: #3e3f46;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+
+}
+
+.item1:hover {
+    background: #33a3ee;
+    transform: translateX(50px);
+}
+.item2:hover {
+    background: #33a3ee;
+    transform: translateY(50px);
+}
+.item:hover {
+    background: #33a3ee;
+    transform: translateX(-50px);
+}
+
+.item1::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+ul li:hover::before {
+    background: #1f5378;
+}
+
+
+ .item1::after {
+    content: " ";
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+
+}
+
+/* .item2::before {
+    content: " ";
+    position: absol;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #434343;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+} */
+.item2::after {
+    content: " ";
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(1deg);
+    transition: 0.5s;
+
+}
+
+.item::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left:  200px;
+    width: 40px;
+    height: 100%;
+    background: #35383e;
+    transform-origin: left;
+    transform: skewY(-45deg);
+    transition: 0.5s;
+}
+.item::after {
+    content: " ";
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+    transition: 0.5s;
+
+}
+ul li:hover::after {
+
+    background: #2982b9;
+}
+
+ul li a {
+
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+
+ul li:hover a {
+
+    color: #fff;
+
+}
+/* 
+ul li:last-child:after {
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+} */
+
+/* ul li a:hover {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.0);
+    background-image: url(https://домен.сайта/путь-к-файлу/имя-файла-с-вашим-текстом.svg);
+    animation: fadeIn ease 1s
+} */
+
+

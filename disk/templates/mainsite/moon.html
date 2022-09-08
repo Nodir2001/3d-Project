@@ -1,0 +1,43 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <title>Moon light paraallaax effects/ vanilla js</title>
+    <link rel="stylesheet" href="{% static 'css/moonParalax.css' %}">
+    <script src="{% static 'js/moonParalax.js' %}"></script>
+
+</head>
+
+<body>
+    <section>
+        <img src="{% static 'img/moon/bg.jpg' %}" id="bg">
+        <img src="{% static 'img/moon/moon.png' %}" id="moon">
+        <img src="{% static 'img/moon/mountain.png' %}" id="mountain">
+        <img src="{% static 'img/moon/road.png' %}" id="road">
+        <h2 id="text">Moon light</h2>
+    </section>
+
+
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+
+        })
+    </script>
+
+</body>
+
+</html>

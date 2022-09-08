@@ -1,0 +1,37 @@
+{% extends 'mainsite/base.html' %} {% block content %}
+{% load static %}
+
+<body>
+    <div class="content" style="    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;">
+        <ul class="wrapper">
+            <li style="--i:6;" class="item1"><a href="#">Main</a></li>
+            <li style="--i:5;" class="item1"><a href="#">About</a></li>
+            <li style="--i:4;" class="item1"><a href="#">Services</a></li>
+            <li style="--i:3;" class="item1"><a href="#">Portfolio</a></li>
+            <li style="--i:2;" class="item1"><a href="#">Our team</a></li>
+            <li style="--i:1;" class="item1"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="wrapper" style="transform: skewY(1deg); padding-bottom: 50px;">
+            <li style="--i:6;" class="item2"><a href="#">Main</a></li>
+            <li style="--i:5;" class="item2"><a href="#">About</a></li>
+            <li style="--i:4;" class="item2"><a href="#">Services</a></li>
+            <li style="--i:3;" class="item2"><a href="#">Portfolio</a></li>
+            <li style="--i:2;" class="item2"><a href="#">Our team</a></li>
+            <li style="--i:1;" class="item2"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="wrapper" style="transform: skewY(+15deg);">
+            <li style="--i:6;" class="item"><a href="#">Main</a></li>
+            <li style="--i:5;" class="item"><a href="#">About</a></li>
+            <li style="--i:4;" class="item"><a href="#">Services</a></li>
+            <li style="--i:3;" class="item"><a href="#">Portfolio</a></li>
+            <li style="--i:2;" class="item"><a href="#">Our team</a></li>
+            <li style="--i:1;" class="item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+{% endblock %}

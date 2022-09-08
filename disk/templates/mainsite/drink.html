@@ -1,0 +1,46 @@
+{% extends 'mainsite/base.html' %} {% block content %}
+{% load static %}
+
+<body>
+    <!-- <div style="    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;"> -->
+        <div class="card">
+            <div class="circle" style="--clr:#f40103">
+                <img src='{% static "img/drink/cocacola.png" %}' class="logo">
+            </div>
+            <dic class="content">
+                <h2>Coca Cola</h2>
+                <p>
+                    Perhaps this is why, over the centuries and throughout the world,
+                    colours have been given special significance and magical properties.
+                    Every colour has a superstition associated with it. The great abstract artists of this century
+                    studied the psychological effect of colours.
+                </p>
+                <a href=""> Explore</a>
+                <img src='{% static "img/drink/cocacola-pic.png" %}' class="cola-pic">
+            </dic>
+        </div>
+        <div class="card">
+            <div class="circle" style="--clr:#02953a">
+                <img src='{% static "img/drink/sprite-pic.png" %}' class="logo">
+            </div>
+            <dic class="content">
+                <h2>Sprite</h2>
+                <p>
+                    Perhaps this is why, over the centuries and throughout the world,
+                    colours have been given special significance and magical properties.
+                    Every colour has a superstition associated with it. The great abstract artists of this century
+                    studied the psychological effect of colours.
+                </p>
+                <a href=""> Explore</a>
+                <img src='{% static "img/drink/sprite.png" %}' class="cola-pic">
+            </dic>
+        </div>
+    <!-- </div> -->
+</body>
+<link rel="stylesheet" href="{% static 'css/drink.css' %}">
+
+{% endblock %}
